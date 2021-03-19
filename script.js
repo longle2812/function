@@ -117,7 +117,7 @@ function countElement(arr) {
         let count = 0;
         let check = arr[0];
         for (let j = 0; j < arr.length; j++) {
-            if (check == arr[j]) {
+            if ((check == arr[j]) && (typeof check == typeof arr[j])) {
                 count += 1
             }
         }
@@ -125,7 +125,7 @@ function countElement(arr) {
             console.log(check + " xuất hiện " + count + " lần");
             let step = 0;
             while (step < arr.length) {
-                if (check == arr[step]) {
+                if ((check == arr[step]) && (typeof check == typeof arr[step])) {
                     arr.splice(step, 1);
                 } else step++;
             }
@@ -135,5 +135,5 @@ function countElement(arr) {
     }
 }
 console.log("Bài 10:")
-countElement([0,1,1,2,3,1,1,2,0,3,4,4,4,5,5,10,10,0]);
+countElement(['0',0,1,1,'1',2,3,'0',1,1,2,0,3,4,4,4,5,5,10,10,0]);
 
