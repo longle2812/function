@@ -130,8 +130,10 @@ function countElement(arr) {
                 } else step++;
             }
         }
+        else arr.splice(0, 1);
+
     }
 }
 console.log("Bài 10:")
-countElement([1,1,2,3,1,1,2,3,4,4,4,5,5,10,10]);
+countElement([0,1,1,2,3,1,1,2,0,3,4,4,4,5,5,10,10,0]);
 
